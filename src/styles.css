@@ -1,0 +1,79 @@
+body {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  color: rgb(11, 11, 201);
+  font-size: 36px;
+  margin-left: 10px;
+}
+h2 {
+  color: rgb(11, 11, 201);
+  font-size: 36px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+h3 {
+  color: rgb(11, 11, 201);
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.small {
+ display: block; 
+  margin: 0 auto;
+  
+}
+form {
+  margin-left: 10px;
+}
+li {
+  list-style: none;
+  text-align: left;
+  margin-left: -20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.weather-forecast {
+  border: 1px solid gray;
+  border-radius: 10px;
+  max-width: 750px;
+  background-color: azure;
+  margin: 20px;
+}
+.temperature {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 1px;
+}
+.temperature-today {
+  font-size: 48px;
+  font-weight: bold;
+}
+.temperature-today img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.row .col-2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 1px;
+  background-color: aqua;
+  border: 10px;
+  border-radius: 10px;
+  margin-left: 24px;
+  margin-bottom: 20px;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+.unit {
+  font-size: 48px;
+  font-weight: bold;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <link rel="stylesheet" href="src/styles.css">
+
+</head>
+<body>
+<div class="container">
+     <div class="weather-forecast">   
+            <h1> 
+                Weather forecast  
+            </h1>
+            <form id="search-form">
+                <input type="text" placeholder="Enter your city"  id="yourLocation"/>
+                <input type="submit" placeholder="Search" value="🔎Search" id="searchButton">
+                <input type="submit" placeholder="Search" value="Current" id="geoButton">
+            </form>
+ 
+            <div class="row" id="today" >
+                <div class="col-6">
+                        <h2 id="current-city"> Kyiv, Ukraine</h2>
+
+                        <div class="col-6" id="date">
+                            <ul>
+                                    <li id="time">
+                                        Today 05.00
+                                    </li>
+                                     <li id="description">ggg</li>   
+
+                            </ul>
+                        </div> 
+                       
+                     </div>
+                <div class="col-6" id="temp-link">
+                         <span class="temperature-today" id="temperature"> 
+                            <img 
+                            src=""
+                            alt="clear"
+                           id="icon" class="float-left" 
+                            />
+                         </span> 
+                            <span class="unit" id="temp-value"><strong></strong
+                                ></span>
+                            <span class="tempCels" id = "celsius" class="active">
+                                <a href="#" id = "celsius-link">°C  </a>
+                            |
+                            <a href="#" id = "farenheit-link">°F </a> </span>
+                        </span> 
+                </div> 
+                <div class="col-6">
+                    <ul>
+                        <li class=humidity-wind>Humidity: <span id="humidity"></span>%</li>
+                        <li class=humidity-wind>Wind: <span id="wind"></span> </span>m/s</li>
+                      </ul>
+            </div>
+
+            <div class="row" >
+                    <div class="col-2"> 
+                        Mon <br> ☀️ <br> +15°C  <br>  +27°C
+                    </div>
+                    <div class="col-2"> 
+                        Tue  <br> 🌥️ <br> +14°C   <br>  +26°C
+                    </div>
+                    <div class="col-2"> 
+                        Wed <br> 🌧️ <br> +10°C   <br>  +22°C
+                    </div>
+                    <div class="col-2"> 
+                        Thu <br>🌥️ <br> +9°C  <br>   +19°C
+                    </div>
+                    <div class="col-2"> 
+                        Fri <br>🌧️ <br> +9°C   <br> +18°C
+                    </div>
+            </div>
+        </div>    
+</div>
+<small>
+    <a href="https://github.com/Kateryna1784/my-weather" target="_blank"> Open source code </a> ", by Kateryna Osetska"
+</small>
+<script src="src/index.js"></script>
+</body>
+</html>
