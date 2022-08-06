@@ -1,4 +1,4 @@
-function dateNow(date) {
+function formatDate(date) {
   let days = [
     "Sunday",
     "Monday",
@@ -8,21 +8,51 @@ function dateNow(date) {
     "Friday",
     "Saturday"
   ];
-  let currentDay = days[date.getDay()];
-  let currentHours = date.getHours();
-  if (currentHours < 10) {
-    currentHours = `0${currentHours}`;
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
   }
-  let currentMinutes = date.getMinutes();
-  if (currentMinutes < 10) {
-    currentMinutes = `0${currentMinutes}`;
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
-  let timeNow = `${currentDay} ${currentHours}:${currentMinutes}`;
-  return timeNow;
+  return `${day} ${hours}:${minutes}`;
 }
+
+function displayForecast () {
+  let forecastElement = document.querySelector("#forecast")
+  let forecastHTML =`<div class = "row">`;
+  let dayss = ["Thu", "Fri", "Sat", "Sun","Mon"];
+  dayss.forEach(function(day){
+      forecastHTML=  forecastHTML + `
+  
+  <div class="col-2">
+      <div class="weather-forecast-date"> ${day} </div>
+     
+      <img 
+          src=" http://openweathermap.org/img/wn/03n@2x.png"
+          alt=""
+          width="25"
+      />
+      <div class="weather-forecast-temperatures" >
+          <span class="weather-forecast-temperature-max"> 18°</span> 
+          <span class="weather-forecast-temperature-min"> 12°</span> 
+      </div>
+    </div> 
+    `;
+  });
+
+  forecastHTML = forecastHTML +`</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+
 let now = new Date();
 let currentTime = document.querySelector("#time");
-currentTime.innerHTML = dateNow(now);
+currentTime.innerHTML = formatDate(now);
+
+
 
 function yourPosition(position) {
   let latitude = position.coords.latitude;
@@ -39,6 +69,7 @@ let locationButton = document.querySelector("#geoButton");
 locationButton.addEventListener("click", showPosition);
 searchCity("Kyiv");
 
+displayForecast();
 
 function submitCity(event) {
   event.preventDefault();
@@ -73,6 +104,7 @@ iconElement.setAttribute(
 );
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 
 
 function searchCity(city) {

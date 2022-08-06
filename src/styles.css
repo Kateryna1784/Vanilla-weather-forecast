@@ -90,3 +90,7 @@ li:first-letter {
   font-size: 48px;
   font-weight: bold;
 }
+.source {
+  margin: 0 auto;
+  display: block;
+}
